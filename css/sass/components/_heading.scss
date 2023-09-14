@@ -1,0 +1,22 @@
+@use"../helpers/variable"as*;
+.heading{
+    text-align: center;
+    margin: 1rem 0;
+    span{
+        color: transparent;
+        font-size: 3vw;
+        -webkit-text-stroke:.1rem $blue;
+        letter-spacing: 1.4px;
+        @media #{$MobMedia} {
+            font-size: 7vw;
+        }
+
+    }
+    h2{
+        color: $white;
+        font-size: 3vw;
+        @media #{$MobMedia} {
+            font-size: 7vw;
+        }
+    }
+}

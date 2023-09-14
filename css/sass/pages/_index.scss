@@ -1,0 +1,482 @@
+@use"../helpers/variable"as*;
+@use"../helpers/mixin"as*;
+@use"../components/btn";
+
+
+// =====start home=====
+.home{
+    background:linear-gradient($bg-color,$black-bg),url(../../../images/home-bg.jpg);
+    min-height: 80vh;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 98%;
+    border-radius: 1rem;
+    @include flex(center);
+    .contact{
+        text-align: center;
+        h3{
+            margin-top: 3rem;
+            display: block;
+            font-size: 4vw;
+            color: transparent;
+            -webkit-text-stroke: .1rem $white;
+            @media #{$MobMedia} {
+                font-size: 6vw;
+            }
+        }
+        h1{
+           
+            font-size: 6vw;
+            font-weight: bold;
+            color: $white;
+            @media #{$MobMedia} {
+                font-size: 8vw;
+            }
+        }
+        p{
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 1rem;
+            color:$light-color;
+            font-size: 1.5vw;
+            line-height: 1.6;
+            @media #{$MobMedia} {
+                font-size: 2.2vw;
+                width: 100%;
+            }
+        }
+        .btn{
+            padding: .5rem;
+           margin: 0 auto;
+           margin-bottom: 4rem;
+           @media #{$MobMedia} {
+                font-size: 1.3rem;
+                padding: .5rem;  
+        }          
+        }
+    }
+
+    
+}
+
+// =====end home=====
+
+// =====start book form=====
+.book{
+    position: relative;
+     top: -5rem;
+     z-index: 10;
+     margin-bottom: 3rem;
+   
+   .container{
+    width: 80%; 
+    background-color: $bg-color;
+    margin: 2rem auto;
+    padding: 2.5rem 0;
+    border-radius: 1rem;
+    form{
+        @include flex(center);
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding:0  2rem;
+        .inputBox{
+            flex: 1 1 12rem;
+            span{
+                margin-bottom: .6rem;
+                color: $light-color;
+                display: block;
+            }
+            input{
+              width: 100%;
+              border: $border;
+              border-radius: 3rem;
+              color: $light-color;
+              padding: .5rem 1rem ;
+              background-color: transparent;
+              
+            }
+        }
+        .btn{
+            padding: 0.3rem;
+            flex: 1 1 10rem;
+            color: $light-color;
+            margin-top: 1.5rem;
+            background-color: $bg-color;
+            &:hover{
+                background-color: $blue;
+            }
+        }
+    }
+    
+   }
+
+}
+// =====end book form=====
+
+// =====start about=====
+.about{ 
+    margin-bottom: 3rem;
+    margin-top: -5rem;
+    .container{
+        @include flex(center);
+        flex-wrap: wrap;
+        gap: 2rem;
+        .video-container{
+            flex: 1 1 20rem; 
+            border-radius: 1rem; 
+           
+            video{ overflow: hidden;
+                width: 100%;
+            }
+            .controls{
+                @include flex(center);
+                gap: .5rem;
+                margin-top: .3rem;
+
+               .boult{
+                cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: $white;
+                    color: aliceblue;
+                    &:hover{
+                        background: $blue;
+
+                    }
+                }
+            }
+            
+        }
+        .content{
+            flex: 1 1 20rem;
+            margin: 0 auto;
+            span{
+                color: $blue;
+                font-size: 1.2rem;
+                padding: 1rem 0;
+            }
+            h3{
+            padding: 1rem 0;
+            color: $white;
+            font-size: 3rem;
+            line-height: 1.5;
+            @media #{$smallMedia} {
+                font-size: 2rem;
+            }
+            @media #{$MobMedia} {
+                font-size: 1.5rem;
+            }
+            }
+            p{
+            color: $light-color;
+            font-size: 1rem;
+            margin-bottom: .8rem;
+            line-height: 1.6;
+            }
+        }
+    }
+}
+// =====end about=====
+
+// =====start destination=====
+.destination{
+    .container{
+        @include grid(17rem);
+       .box{
+   
+        width: 100%;
+        overflow: hidden;
+        border-radius: 1rem;
+        position: relative;
+        background-color: $bg-color;
+        
+        .image{
+            overflow: hidden;
+            height: 12rem;     
+            img{
+              
+                width: 100%;
+                cursor: pointer;               
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .info{
+            text-align: center;
+            h3{
+                color: $white;
+                margin: .5rem 0;
+            }
+            p{
+                color: $light-color;
+                font-size: 1rem;
+                line-height: 1.6;
+                width: 80%;
+                margin: 0 auto;
+            }
+            a{
+               color: $blue;
+               font-size: 1rem;
+               margin: .7rem 0;
+               @include flex(center);
+               gap: .3rem;  
+               &:hover {
+                gap: 1rem;
+               }
+            }
+
+        }
+       }
+    }
+}
+// =====end destination=====
+
+// =====start services=====
+.services{
+    .container{
+        @include grid(20rem);
+        .service{
+            width: 100%;
+            padding: 2rem;
+            text-align: center;
+            background-color: $bg-color;
+            border-radius: 1rem;
+            border: .1rem solid;
+            cursor: pointer;
+            &:hover{
+                border-color: $blue
+            }
+            i{
+                font-size: 2.2rem;
+                color: $blue;
+                padding: 1rem 0;
+            }
+            h3{
+                font-size: 1.8rem;
+                color: $white;
+            }
+            p{
+                font-size: 1.2rem;
+                color: $light-color;
+                padding: 1rem 0;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+// =====end services=====
+
+// =====start gallery=====
+.gallery{
+    margin: 2rem 0;
+    .container{
+        columns: 3 17rem;
+        column-gap: .8rem;
+        .box{
+            margin-bottom: 1rem;
+            -webkit-column-break-inside: avoid;
+             break-inside: avoid-column;
+             
+             overflow: hidden;
+            img{
+                border-radius: 1rem;
+                width: 100%;
+            }
+            span{
+                color: $light-color;
+                font-size: .8rem;
+            }
+            h3{
+                padding: .5rem 0;
+                color: $white;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+// =====end gallery=====
+
+// =====start blogs=====
+.blogs{
+    .container{
+        @include grid(22rem);
+       @media #{$MobMedia} {
+        @include grid(17rem);
+       }
+        .blog{
+            background-color: $bg-color;
+            border-radius: 1rem;
+            overflow: hidden;
+            .image{
+                width: 100%;
+                height: 25rem;
+               overflow: hidden;
+               @media #{$MobMedia} {
+                height: 20rem;
+               }
+              
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .info{
+                padding: 1rem;
+                h3{
+                    cursor: pointer;
+                    color: $white;
+                    &:hover{
+                        color: $blue;
+                    }
+                }
+                p{
+                    color: $light-color;
+                    line-height: 1.6;
+                    margin: 1rem auto;
+                    
+                }
+                .icon{
+                    @include flex(space-between);
+                    color: $light-color;
+                    span{
+                        cursor: pointer;
+                        i{
+                            color: $blue;
+                            margin-right: .5rem;
+                        }
+                        &:hover{
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+// =====end blogs=====
+// =====start review=====
+.review .container{
+    margin: 4rem 0;
+@include grid(21rem);
+.text{
+    margin: auto;
+    span{
+        font-size: 1rem;
+        color: $blue;
+    }
+    h3{
+        color: $white;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+    }
+    p{
+        color: $light-color;
+        line-height: 1.8;
+        font-size: .8rem;
+        max-width: 85%;
+    }
+}
+.client{
+    
+    
+    display:  flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    
+    .person{
+        background-color: $bg-color;
+        padding: 1rem;
+        flex: 1 1 9rem;
+        border: .1rem solid;
+        cursor: pointer;
+        &:hover{
+            border-color: $blue;
+        }
+        p{
+            max-width:100%;
+            color: $light-color;
+            line-height: 1.5;
+            
+         }
+        .info{
+           @include flex(space-between);
+           gap: 1rem;
+           margin: 1rem 0;
+            img{
+                width: 3rem;
+                border-radius: 50%;
+            }
+            div{
+                h3{
+                    color: $white;
+                    font-size: .8rem;
+                    padding: .3rem 0;
+                }
+                p{
+                    color: $blue;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+}
+// =====end review=====
+
+// =====start adventures====
+.adventures{
+    background-image: url(../../../images/banner-bg.jpg);
+    text-align: center;
+    margin: 3rem auto;
+    position: relative;
+    padding: 2rem 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: "";
+        @include overlay;
+    }
+    span{
+        color: $blue;
+        font-size: 1.2rem;
+    }
+    h3{
+        color: $white;
+        font-size: 1.8rem;
+        padding: 1rem 0;
+    }
+    p{
+        width: 70vw;
+        display: block;
+        margin: 1rem auto;
+        line-height: 1.7;
+        color: #dedede;
+    }
+    .btn{
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        
+    };
+}
+// =====end adventures=====
+
+
+
+
+
+

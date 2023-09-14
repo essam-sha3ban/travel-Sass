@@ -1,0 +1,14 @@
+@use"../helpers/variable"as*;
+.btn{
+border:$border;
+padding: 1rem 1.5rem;
+color: $blue;
+font-size: 1.5rem;
+border-radius: 3rem;
+width: fit-content;
+cursor: pointer;
+&:hover{
+    background-color: $blue;
+    color: $black;
+}
+}

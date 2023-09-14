@@ -1,0 +1,109 @@
+@use"../helpers/variable"as*;
+@use"../helpers/mixin"as*;
+%box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.footer {
+    .container{
+        @include grid(15rem);
+        margin: 3rem 0;
+        .box-content{
+            @extend %box;
+            &.icon{
+                font-size: 1.3rem;
+                .logo{
+                    color: $white;
+                    i{
+                        color: $blue;
+                        padding-right: .5rem;
+                    }
+                }
+                p{
+                    color: $light-color;
+                    font-size: 1rem;
+                    line-height: 1.6;
+                }
+                .social{
+                    @include flex(flex-start);
+                    gap: 1rem;
+                    i{
+                        cursor: pointer;
+                        color: $blue;
+                        padding: .4rem;
+                        border-radius: 50%;
+                        border: $border;
+                        &:hover{
+                            background-color: $blue;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+            &.link{
+                h3{
+                    color: $white;
+                }
+                a{
+                    color: $light-color;
+                    &:hover i{
+                        padding-right: .8rem;
+                    }
+                    i{
+                        color: $blue;
+                        padding-right: .3rem;
+                    }
+                }
+            }
+            &.contact{
+                h3{
+                    color: $white;
+                }
+                span{
+                    color: $light-color;
+                    i{
+                        color: $blue;
+                        padding-right: .5rem;
+                    }
+                }
+            }
+            &.subscribe{
+                h3{
+                    color: $white;
+                }
+                span{
+                    color: $light-color;
+                }
+                input{
+                    padding: 0.3rem;
+                    border-radius: 1rem;
+                    background: transparent;
+                    border: $border;
+                    color: $light-color;
+                }
+                .btn{
+                    padding: .5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
+    .copyright{
+        margin-top: 1rem;
+        padding: 1rem 0;
+       
+        background-color: $bg-color; 
+         
+        span{
+            color: $light-color;
+            @include flex (center); 
+
+            p{
+                color: $blue;
+                padding:0 .5rem;
+            }
+        }
+    }
+}
